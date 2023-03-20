@@ -24,7 +24,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		if velocity.x < 0:
 			velocity.x = move_toward(velocity.x, MAX_SPEED, 2*ACCEL * delta)
 		else:
@@ -32,7 +32,7 @@ func _process(delta):
 		print(velocity.x)
 		anim.play("walk")
 		anim.flip_h = false
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("move_left"):
 		if velocity.x > 0:
 			velocity.x =  move_toward(velocity.x, -MAX_SPEED, 2*ACCEL * delta)
 		else:
@@ -44,7 +44,7 @@ func _process(delta):
 		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
 		anim.play("idle")
 	
-	if Input.is_action_just_pressed("ui_select") and jumps > 0 :
+	if Input.is_action_just_pressed("jump") and jumps > 0 :
 		jumps -= 1
 		velocity.y = -JUMP
 	if not is_on_floor():

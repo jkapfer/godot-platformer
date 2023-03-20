@@ -29,7 +29,6 @@ func _process(delta):
 			velocity.x = move_toward(velocity.x, MAX_SPEED, 2*ACCEL * delta)
 		else:
 			velocity.x = move_toward(velocity.x, MAX_SPEED, ACCEL * delta)
-		print(velocity.x)
 		anim.play("walk")
 		anim.flip_h = false
 	elif Input.is_action_pressed("move_left"):
@@ -53,7 +52,9 @@ func _process(delta):
 		reset_jumps(1)
 func _physics_process(delta):
 	velocity.y += GRAVITY * delta
+	velocity.y += GRAVITY * delta
 	velocity=move_and_slide(velocity, Vector2.UP)
+
 	
 	
 func reset_jumps(num):

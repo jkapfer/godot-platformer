@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Terrain.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World.gd" type="Script" id=3]
 [ext_resource path="res://assets/terrain/tiles_packed.png" type="Texture" id=4]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 18, 0, 18, 18, 0, 18 )
@@ -191,6 +192,8 @@ scale = Vector2( 3, 3 )
 shape = SubResource( 16 )
 
 [node name="Enemy" parent="." instance=ExtResource( 5 )]
-position = Vector2( 136, 353 )
+position = Vector2( 135, 354 )
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
 
 [connection signal="body_entered" from="KillPlane" to="." method="_on_KillPlane_body_entered"]

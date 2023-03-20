@@ -14,4 +14,4 @@ func _ready():
 
 func _physics_process(delta):
 	velocity.y += delta*GRAVITY
-	move_and_slide(velocity, Vector2.UP)
+	velocity = move_and_slide(velocity, Vector2.UP)

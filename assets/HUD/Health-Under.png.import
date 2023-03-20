@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Coin-1.png-d33319ae778608cdaf50ea4b25d765a9.stex"
+path="res://.import/Health-Under.png-a3a1a6cc2f80aca39fa15fbc492f1481.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/collectables/Coin-1.png"
-dest_files=[ "res://.import/Coin-1.png-d33319ae778608cdaf50ea4b25d765a9.stex" ]
+source_file="res://assets/HUD/Health-Under.png"
+dest_files=[ "res://.import/Health-Under.png-a3a1a6cc2f80aca39fa15fbc492f1481.stex" ]
 
 [params]
 

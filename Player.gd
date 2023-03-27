@@ -4,10 +4,10 @@ extends KinematicBody2D
 const MAX_SPEED = 500
 
 #Forces
-const GRAVITY = 1100
+const GRAVITY = 650
 const ACCEL = 500
 const FRICTION = 1200
-const JUMP = 650
+const JUMP = 660
 
 #default jump count
 var jumps = 1
@@ -20,6 +20,7 @@ var velocity = Vector2.ZERO
 func _ready():
 	anim.play("idle")
 	
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -54,8 +55,9 @@ func _physics_process(delta):
 	velocity.y += GRAVITY * delta
 	velocity.y += GRAVITY * delta
 	velocity=move_and_slide(velocity, Vector2.UP)
-
-	
 	
 func reset_jumps(num):
 	jumps = num
+	
+func _on_Hurtbox_body_entered(body):
+	pass # Replace with function body.

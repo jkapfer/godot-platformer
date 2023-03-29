@@ -185,9 +185,6 @@ drag_margin_left = 0.4
 drag_margin_right = 0.4
 drag_margin_bottom = 0.1
 
-[node name="Area2D" parent="Player" instance=ExtResource( 7 )]
-position = Vector2( 317, -12 )
-
 [node name="KillPlane" type="Area2D" parent="."]
 position = Vector2( 500, 1000 )
 scale = Vector2( 3, 3 )
@@ -199,5 +196,8 @@ shape = SubResource( 16 )
 position = Vector2( 135, 354 )
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Area2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 347, 188 )
 
 [connection signal="body_entered" from="KillPlane" to="." method="_on_KillPlane_body_entered"]

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const GRAVITY = 650sss
+const GRAVITY = 650
 var velocity = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.

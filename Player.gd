@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
 #Speed Caps
-const MAX_SPEED = 500
+const MAX_SPEED = 400
 
 #Forces
 const GRAVITY = 650
-const ACCEL = 500
-const FRICTION = 1200
-const JUMP = 660
+const ACCEL = 300
+const FRICTION = 1700
+const JUMP = 670
 
 #default jump count
 var jumps = 1
@@ -59,5 +59,7 @@ func _physics_process(delta):
 func reset_jumps(num):
 	jumps = num
 	
+func bounce():
+	velocity.y = 0.5*JUMP
 func _on_Hurtbox_body_entered(body):
 	pass # Replace with function body.

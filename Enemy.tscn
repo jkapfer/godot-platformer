@@ -22,11 +22,12 @@ animations = [ {
 extents = Vector2( 10, 6.75 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 12, 2 )
+extents = Vector2( 8.5, 2 )
 
 [node name="Enemy" type="KinematicBody2D"]
 scale = Vector2( 2, 2 )
 script = ExtResource( 4 )
+direction = -1
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
@@ -43,5 +44,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource( 3 )
+
+[node name="floor_check" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 20 )
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_Hurtbox_body_entered"]

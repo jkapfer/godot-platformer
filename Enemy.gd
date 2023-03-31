@@ -10,7 +10,7 @@ export(DirectionEnum) var direction
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if direction == 1:
+	if direction == DirectionEnum.RIGHT:
 		$AnimatedSprite.flip_h = true
 	$floor_check.position.x = $CollisionShape2D.shape.get_extents().x * direction
 
